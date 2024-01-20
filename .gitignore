@@ -4,7 +4,8 @@ lab3v2/*
 devkits/*
 .metadata/*
 simulation/*
-opencores_i2c/*
+ip/*
+output_files/*
 
 
 # C
