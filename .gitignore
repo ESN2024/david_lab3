@@ -5,7 +5,6 @@ devkits/*
 .metadata/*
 simulation/*
 ip/*
-output_files/*
 
 
 # C
