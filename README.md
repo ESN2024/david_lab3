@@ -26,6 +26,7 @@ La figure 2 présente la configuration de l'outil *Platform Designer* utilisé p
 Le système final correspond bien aux attentes demandées, voir vidéo 1 présentant son fonctionnement.
 
 *Vidéo 1. Système en fonctionnement.*
+
 Les fonctions de communications sont fonctionnelles, les fonctions de récupération, de conditionnement et d'affichage des mesures du capteurs sont elles aussi fonctionnelles.
 Nous pouvons choisir quel axe nous souhaitons afficher en appuyant sur le bouton-poussoir KEY0 et l'outil *Nios2-terminal.exe* permet de savoir quel axe est affiché et en profite pour afficher les mesure qu'il reçoit.
 # Conclusion
