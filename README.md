@@ -11,11 +11,11 @@ La figure 1 comporte le synoptique du système.
 
 Nous voyons l'ajout de l'accéléromètre. Se trouve aussi sur l'outil Qsys un bloc IP libre appelé "opencores I2C" qui est un convertisseur I2C vers Avalon Memory-Mapped et inversement. Ce bloc nous permet de communiquer et recevoir des informations avec le capteur.
 
-3 7sseg
-
 Une grande partie du travail sera donc de mettre en place la communication entre notre système et le catpeur à partir de la documentation de celui-ci. Nous allons écrire des fonctions en C à partir des fonctions de communication I2C fournies par la librairie HAL. 
 
 Une seconde partie est la calibration du capteur et le conditionnement du signal binaire signé renvoyé par le capteur en signal affichable sur 7-segment.
+Cette partie ajoute une sous-contrainte : nous ne devons maintenant plus seulement afficher des nombres mais aussi afficher une virgule et un signe. Comme nous avions interfacé dans le système précédent 3 afficheurs *7-segment*, la solution la plus simple est d'utiliser celui qui est le plus à gauche pour afficher le signe, celui du centre pour afficher les G d'accélération (il contiendra toujours une virgule) et le troisième à droite affichera les dixièmes de G d'accélération.
+
 
 Enfin, la dernière partie qui est réalisée est la fonction de sélection de l'axe à afficher, nous nous sommes servis ici des routines d'interruptions utilisées lors du TP1.
 
