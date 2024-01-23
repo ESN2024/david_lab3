@@ -11,13 +11,21 @@ La figure 1 comporte le synoptique du système.
 
 Nous voyons l'ajout de l'accéléromètre. Se trouve aussi sur l'outil Qsys un bloc IP libre appelé "opencores I2C" qui est un convertisseur I2C vers Avalon Memory-Mapped et inversement. Ce bloc nous permet de communiquer et recevoir des informations avec le capteur.
 
-La figure 2 présente la configuration de l'outil *Platform Designer* utilisé pour répondre au cahier des charges.
 
+
+Une grande partie du travail sera donc de mettre en place la communication entre notre système et le catpeur à partir de la documentation de celui-ci. Nous allons écrire des fonctions en C à partir des fonctions de communication I2C fournies par la librairie HAL. 
+
+Une seconde partie est la calibration du capteur et le conditionnement du signal binaire signé renvoyé par le capteur en signal affichable sur 7-segment.
+
+Enfin, la dernière partie qui est réalisée est 
+
+La figure 2 présente la configuration de l'outil *Platform Designer* utilisé pour répondre au cahier des charges.
+![image](https://github.com/ESN2024/david_lab3/assets/124572489/e3582c0d-30d6-492f-b495-ed8adf422208)
 *Figure 2. Configuration Qsys.*
 # 2. Résultats
+Le système final correspond bien aux attentes demandées, voir vidéo 1 présentant son fonctionnement.
 
-
-
-
+*Vidéo 1. Système en fonctionnement.*
+La fonction de mesure a 
 # Conclusion
 
