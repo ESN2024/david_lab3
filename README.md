@@ -25,6 +25,10 @@ La figure 2 présente la configuration de l'outil *Platform Designer* utilisé p
 # 2. Résultats
 Le système final correspond bien aux attentes demandées, voir vidéo 1 présentant son fonctionnement.
 
+
+https://github.com/ESN2024/david_lab3/assets/124572489/c80b09f9-4bec-4377-9568-5b941066b028
+
+
 *Vidéo 1. Système en fonctionnement.*
 
 Les fonctions de communications sont fonctionnelles, les fonctions de récupération, de conditionnement et d'affichage des mesures du capteurs sont elles aussi fonctionnelles.
