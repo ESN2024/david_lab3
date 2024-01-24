@@ -1,5 +1,5 @@
 Flow report for lab3
-Sat Jan 20 15:49:34 2024
+Wed Jan 24 10:06:03 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Jan 20 15:49:34 2024       ;
+; Flow Status                        ; Successful - Wed Jan 24 10:06:03 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3                                        ;
 ; Top-level Entity Name              ; lab3vhd2                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 2,351 / 49,760 ( 5 % )                      ;
-;     Total combinational functions  ; 2,191 / 49,760 ( 4 % )                      ;
+; Total logic elements               ; 2,342 / 49,760 ( 5 % )                      ;
+;     Total combinational functions  ; 2,187 / 49,760 ( 4 % )                      ;
 ;     Dedicated logic registers      ; 1,296 / 49,760 ( 3 % )                      ;
 ; Total registers                    ; 1296                                        ;
 ; Total pins                         ; 42 / 360 ( 12 % )                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/20/2024 15:48:16 ;
+; Start date & time ; 01/24/2024 09:59:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab3                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589193.170576209516508         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 10995770589193.170608679013088         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -87,6 +87,10 @@ refer to the applicable agreement for further details.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --                                ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --                                ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --                                ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; lab3vhd2    ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; lab3vhd2    ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; lab3vhd2    ; Top                               ;
@@ -102,12 +106,14 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 4900 MB             ; 00:01:29                           ;
-; Fitter               ; 00:00:13     ; 1.5                     ; 5680 MB             ; 00:00:21                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4694 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 2.1                     ; 4843 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4699 MB             ; 00:00:02                           ;
-; Total                ; 00:01:13     ; --                      ; --                  ; 00:02:01                           ;
+; Analysis & Synthesis ; 00:00:56     ; 1.0                     ; 4907 MB             ; 00:01:40                           ;
+; Fitter               ; 00:00:12     ; 1.5                     ; 5678 MB             ; 00:00:22                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 2.1                     ; 4846 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4701 MB             ; 00:00:02                           ;
+; MIF/HEX Update       ; 00:00:01     ; 1.0                     ; 4737 MB             ; 00:00:01                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4693 MB             ; 00:00:03                           ;
+; Total                ; 00:01:21     ; --                      ; --                  ; 00:02:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +127,8 @@ refer to the applicable agreement for further details.
 ; Assembler            ; DESKTOP-5NSV725  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-5NSV725  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-5NSV725  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-5NSV725  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-5NSV725  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -132,6 +140,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off lab3 -c lab3
 quartus_asm --read_settings_files=off --write_settings_files=off lab3 -c lab3
 quartus_sta lab3 -c lab3
 quartus_eda --read_settings_files=off --write_settings_files=off lab3 -c lab3
+quartus_cdb lab3 -c lab3 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off lab3 -c lab3
 
 
 

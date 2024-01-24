@@ -139,7 +139,7 @@ ACDS_VERSION := 18.1
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := lab3v2.elf
+ELF := lab3v1.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS += ../../main.c
