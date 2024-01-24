@@ -48,7 +48,7 @@ volatile enum axis{X, Y, Z} axis_to_print =X;
 
 //user functions
 alt_u16 complement_a_2(alt_u16 val){
-    return (val ^ 0xffff) -1;
+    return (val ^ 0xffff) +1;
 }
 
 void gsensor_i2c_single_write(alt_u8 register_addr, alt_u8 data){
@@ -100,17 +100,23 @@ void gsensor_print(){
     switch (axis_to_print){
     case X:
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_1_BASE, gsensor_to_bcd(x_val));
-        alt_printf("printing X\n");
+        alt_printf("printing X...\n");
+        alt_printf("hex \t\t\tX= %x\n", x_val);
+        alt_printf("bcd (sign;unit;tenth) \tX= %x\n\n", gsensor_to_bcd(x_val));
         return;
 
     case Y:
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_1_BASE, gsensor_to_bcd(y_val));
-        alt_printf("printing Y\n");
+        alt_printf("printing Y...\n");
+        alt_printf("hex \t\t\tY= %x\n", y_val);
+        alt_printf("bcd (sign;unit;tenth) \tY= %x\n\n", gsensor_to_bcd(y_val));
         return;
 
     case Z:
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_1_BASE, gsensor_to_bcd(z_val));
-        alt_printf("printing Z\n");
+        alt_printf("printing Z...\n");
+        alt_printf("hex \t\t\tZ= %x\n", z_val);
+        alt_printf("bcd (sign;unit;tenth) \tZ= %x\n\n", gsensor_to_bcd(z_val));
         return;
 
     default:
@@ -120,13 +126,12 @@ void gsensor_print(){
 }
 
 void gsensor_measurement(){
-    if((gsensor_i2c_single_read(INT_SOURCE) & 0x80) == 0x80){
-        x_val= gsensor_i2c_multiple_read(DATAX0);
-        y_val= gsensor_i2c_multiple_read(DATAY0);
-        z_val= gsensor_i2c_multiple_read(DATAZ0);
-    }
-    else
+    if((gsensor_i2c_single_read(INT_SOURCE) & 0x80) != 0x80)
         alt_printf("ERROR** Gsensor wasn't ready for measurements\n");
+
+    x_val= gsensor_i2c_multiple_read(DATAX0);
+    y_val= gsensor_i2c_multiple_read(DATAY0);
+    z_val= gsensor_i2c_multiple_read(DATAZ0);
 }
 
 
@@ -185,6 +190,7 @@ int main(){
 
     //gsensor init
     alt_printf("gsensor init\n");
+    gsensor_i2c_single_read(DEVID);
     gsensor_i2c_single_write(BW_RATE, 0b00001010);
     gsensor_i2c_single_write(POWER_CTL, 0b00001000);
     gsensor_i2c_single_write(INT_ENABLE, 0b10000000);
@@ -194,6 +200,7 @@ int main(){
 
     alt_printf("INITIALIZATION FINISHED\n\n");
 
-    while(1){}
+    while(1){
+    }
     return 0;
 }
